@@ -1,0 +1,53 @@
+/*<!-- CASE 2: Inline Fill + Stroke; CSS class styling not working -->
+Point 1. stroked instance is no longer styleable from instance*/
+.stroked-instance {
+    stroke: green; /*nothing happens*/
+    fill: red; /*nada*/
+}
+
+ /*<!-- CASE 1: No inline fill; CSS Class works -->*/
+/*Point 2. but is from filled instance. Also, we can still apply a stroke*/
+.filled-instance {
+    stroke: #cc8ac1;
+    stroke-width: 5px;
+    /*fill: lighten(#cc8ac1, 20%);*/
+    fill: #ebd1e7;
+}
+/*<!-- CASE 3: No inline fill; CSS Class fill transparent works -->*/
+/*Point 3. You can always achieve an outlined effect by simply "turning off" the fill*/
+.filled-instance-off {
+    stroke: #d08aaf;
+    stroke-width: 5px;
+    fill: transparent;
+}
+
+/* <!--  CASE 2: Inline Fill + Stroke; CSS class styling not working   -->*/
+/*<!--  But symbol#xxx [stroke] works  -->*/
+/*Point 4. If you want to apply stroke via CSS to the SVG exported with stroke and no fill, you have to target the shapes/paths within the source SVG in the defintion*/
+symbol#completed-copy-stroked-2 [stroke] {
+    stroke: #dd6435;
+    stroke-width: 5px;
+}
+
+ /*<!-- CASE 4: inline fill none + stroke color; CSS Class fill transparent works -->*/
+ /*<!--  Inline class: ibestrokin  -->*/
+/*Point 5. You can also just add classes within the source SVG and apply CSS to those directly.*/
+.ibestrokin {
+    stroke: magenta;
+    stroke-width: 5px;
+}
+
+.istrokeittotheeast {
+    stroke: green;
+    stroke-width: 7px;
+} 
+ /*<!-- CASE 5: inline fill red > css styling cyan; but other place works -->*/
+/*Point 6. Although we can override fill/stroke attributes from CSS if we apply that CSS directly to the definition, we cannot do via CSS applied to the instance*/
+.hand-filled-instance {
+    fill: cyan;
+     /*the hard coded fill="red" path won't get affected by this!!!*/
+    /* Note it doesn't matter if it's black fill="#000"...the black would remain*/
+    /*stroke: darken(red, 10%);*/
+    stroke: #CC0000;
+    stroke-width: 5px;
+}

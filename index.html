@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Amazing SVG Styling">
+    <meta name="author" content="Network Perception">
+    <meta http-equiv="cache-control" CONTENT="no-cache">
+    <!-- Title and Icons -->
+    <title>Amazing SVG Styling</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <svg xmlns="http://www.w3.org/2000/svg" style="width:0;height:0;visibility:hidden;">
+        <!-- CASE 1: No inline fill; CSS Class works -->
+        <!-- CASE 3: No inline fill; CSS Class fill transparent works -->
+        <symbol viewBox="0 0 280 280" id="completed-copy-filled">
+            <title>completed-copy-filled</title>
+            <path d="M245,24.5h-21v21c0,11.7-9.3,21-21,21s-21-9.3-21-21v-21H98v21c0,11.7-9.3,21-21,21s-21-9.3-21-21v-21H35
+  c-17.5,0-31.5,14-31.5,31.5v189c0,17.5,14,31.5,31.5,31.5h210c17.5,0,31.5-14,31.5-31.5V56C276.5,38.5,262.5,24.5,245,24.5z
+   M255.5,245c0,5.8-4.7,10.5-10.5,10.5H35c-5.8,0-10.5-4.7-10.5-10.5V87.5h229.8L255.5,245L255.5,245z" />
+            <g>
+                <path d="M77,56c5.8,0,10.5-4.7,10.5-10.5V14c0-5.8-4.7-10.5-10.5-10.5S66.5,8.2,66.5,14v31.5C66.5,52.5,71.2,56,77,56z" />
+                <path d="M203,56c5.8,0,10.5-4.7,10.5-10.5V14c0-5.8-4.7-10.5-10.5-10.5S192.5,8.2,192.5,14v31.5C192.5,52.5,197.2,56,203,56z" /> </g>
+            <g>
+                <polygon points="198.3,120.2 191.3,114.3 186.7,119 173.8,130.7 171.5,134.2 159.8,145.8 148.2,157.5 135.3,169.2 123.7,182 
+    112,193.7 92.2,172.7 86.3,168 79.3,173.8 68.8,184.3 79.3,194.8 92.2,207.7 103.8,219.3 112,227.5 122.5,217 129.5,210 
+    134.2,205.3 147,193.7 158.7,182 170.3,169.2 186.7,152.8 198.3,141.2 208.8,130.7   " /> </g>
+        </symbol>
+        <!-- CASE 4: inline fill none + stroke color; CSS Class fill transparent works -->
+        <!--  Inline class: ibestrokin  -->
+        <symbol viewBox="0 0 280 280" id="completed-copy-stroked-classes">
+            <title>completed-copy-stroked-classes</title>
+            <g>
+                <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M245,24.5h-21v21c0,11.7-9.3,21-21,21c-11.7,0-21-9.3-21-21v-21H98
+    v21c0,11.7-9.3,21-21,21s-21-9.3-21-21v-21H35c-17.5,0-31.5,14-31.5,31.5v189c0,17.5,14,31.5,31.5,31.5h210
+    c17.5,0,31.5-14,31.5-31.5V56C276.5,38.5,262.5,24.5,245,24.5z M255.5,245c0,5.8-4.7,10.5-10.5,10.5H35c-5.8,0-10.5-4.7-10.5-10.5
+    V87.5h229.8L255.5,245L255.5,245z" />
+                <path class="ibestrokin" fill="none" stroke="#000000" stroke-miterlimit="10" d="M77,56c5.8,0,10.5-4.7,10.5-10.5V14c0-5.8-4.7-10.5-10.5-10.5
+    c-5.8,0-10.5,4.7-10.5,10.5v31.5C66.5,52.5,71.2,56,77,56z" />
+                <path class="ibestrokin" fill="none" stroke="#000000" stroke-miterlimit="10" d="M203,56c5.8,0,10.5-4.7,10.5-10.5V14c0-5.8-4.7-10.5-10.5-10.5
+    c-5.8,0-10.5,4.7-10.5,10.5v31.5C192.5,52.5,197.2,56,203,56z" />
+                <polygon class="istrokeittotheeast" fill="none" stroke="#000000" stroke-miterlimit="10" points="198.3,120.2 191.3,114.3 186.7,119 173.8,130.7 171.5,134.2 
+    159.8,145.8 148.2,157.5 135.3,169.2 123.7,182 112,193.7 92.2,172.7 86.3,168 79.3,173.8 68.8,184.3 79.3,194.8 92.2,207.7 
+    103.8,219.3 112,227.5 122.5,217 129.5,210 134.2,205.3 147,193.7 158.7,182 170.3,169.2 186.7,152.8 198.3,141.2 208.8,130.7   " /> </g>
+        </symbol>
+        <!--  CASE 2: Inline Fill + Stroke; CSS class styling not working   -->
+        <!--  But symbol#xxx [stroke] works  -->
+        <symbol viewBox="0 0 280 280" id="completed-copy-stroked">
+            <title>completed-copy-stroked</title>
+            <g>
+                <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M245,24.5h-21v21c0,11.7-9.3,21-21,21c-11.7,0-21-9.3-21-21v-21H98
+    v21c0,11.7-9.3,21-21,21s-21-9.3-21-21v-21H35c-17.5,0-31.5,14-31.5,31.5v189c0,17.5,14,31.5,31.5,31.5h210
+    c17.5,0,31.5-14,31.5-31.5V56C276.5,38.5,262.5,24.5,245,24.5z M255.5,245c0,5.8-4.7,10.5-10.5,10.5H35c-5.8,0-10.5-4.7-10.5-10.5
+    V87.5h229.8L255.5,245L255.5,245z" />
+                <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M77,56c5.8,0,10.5-4.7,10.5-10.5V14c0-5.8-4.7-10.5-10.5-10.5
+    c-5.8,0-10.5,4.7-10.5,10.5v31.5C66.5,52.5,71.2,56,77,56z" />
+                <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M203,56c5.8,0,10.5-4.7,10.5-10.5V14c0-5.8-4.7-10.5-10.5-10.5
+    c-5.8,0-10.5,4.7-10.5,10.5v31.5C192.5,52.5,197.2,56,203,56z" />
+                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="198.3,120.2 191.3,114.3 186.7,119 173.8,130.7 171.5,134.2 
+    159.8,145.8 148.2,157.5 135.3,169.2 123.7,182 112,193.7 92.2,172.7 86.3,168 79.3,173.8 68.8,184.3 79.3,194.8 92.2,207.7 
+    103.8,219.3 112,227.5 122.5,217 129.5,210 134.2,205.3 147,193.7 158.7,182 170.3,169.2 186.7,152.8 198.3,141.2 208.8,130.7   " /> </g>
+        </symbol>
+        <symbol viewBox="0 0 280 280" id="completed-copy-stroked-2">
+            <title>completed-copy-stroked</title>
+            <g>
+                <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M245,24.5h-21v21c0,11.7-9.3,21-21,21c-11.7,0-21-9.3-21-21v-21H98
+    v21c0,11.7-9.3,21-21,21s-21-9.3-21-21v-21H35c-17.5,0-31.5,14-31.5,31.5v189c0,17.5,14,31.5,31.5,31.5h210
+    c17.5,0,31.5-14,31.5-31.5V56C276.5,38.5,262.5,24.5,245,24.5z M255.5,245c0,5.8-4.7,10.5-10.5,10.5H35c-5.8,0-10.5-4.7-10.5-10.5
+    V87.5h229.8L255.5,245L255.5,245z" />
+                <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M77,56c5.8,0,10.5-4.7,10.5-10.5V14c0-5.8-4.7-10.5-10.5-10.5
+    c-5.8,0-10.5,4.7-10.5,10.5v31.5C66.5,52.5,71.2,56,77,56z" />
+                <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M203,56c5.8,0,10.5-4.7,10.5-10.5V14c0-5.8-4.7-10.5-10.5-10.5
+    c-5.8,0-10.5,4.7-10.5,10.5v31.5C192.5,52.5,197.2,56,203,56z" />
+                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="198.3,120.2 191.3,114.3 186.7,119 173.8,130.7 171.5,134.2 
+    159.8,145.8 148.2,157.5 135.3,169.2 123.7,182 112,193.7 92.2,172.7 86.3,168 79.3,173.8 68.8,184.3 79.3,194.8 92.2,207.7 
+    103.8,219.3 112,227.5 122.5,217 129.5,210 134.2,205.3 147,193.7 158.7,182 170.3,169.2 186.7,152.8 198.3,141.2 208.8,130.7   " /> </g>
+        </symbol>
+        <!-- CASE 5: inline fill red > css styling cyan; but other place works -->
+        <symbol viewBox="0 0 280 280" id="hand-filled">
+            <title>hand-filled</title>
+            <path fill="red" d="M245,24.5h-21v21c0,11.7-9.3,21-21,21s-21-9.3-21-21v-21H98v21c0,11.7-9.3,21-21,21s-21-9.3-21-21v-21H35
+  c-17.5,0-31.5,14-31.5,31.5v189c0,17.5,14,31.5,31.5,31.5h210c17.5,0,31.5-14,31.5-31.5V56C276.5,38.5,262.5,24.5,245,24.5z
+   M255.5,245c0,5.8-4.7,10.5-10.5,10.5H35c-5.8,0-10.5-4.7-10.5-10.5V87.5h229.8L255.5,245L255.5,245z" />
+            <g>
+                <path d="M77,56c5.8,0,10.5-4.7,10.5-10.5V14c0-5.8-4.7-10.5-10.5-10.5S66.5,8.2,66.5,14v31.5C66.5,52.5,71.2,56,77,56z" />
+                <path d="M203,56c5.8,0,10.5-4.7,10.5-10.5V14c0-5.8-4.7-10.5-10.5-10.5S192.5,8.2,192.5,14v31.5C192.5,52.5,197.2,56,203,56z" /> </g>
+            <g>
+                <polygon points="198.3,120.2 191.3,114.3 186.7,119 173.8,130.7 171.5,134.2 159.8,145.8 148.2,157.5 135.3,169.2 123.7,182 
+    112,193.7 92.2,172.7 86.3,168 79.3,173.8 68.8,184.3 79.3,194.8 92.2,207.7 103.8,219.3 112,227.5 122.5,217 129.5,210 
+    134.2,205.3 147,193.7 158.7,182 170.3,169.2 186.7,152.8 198.3,141.2 208.8,130.7   " /> </g>
+        </symbol>
+    </svg>
+</head>
+
+<body>
+    <main class="p-4">
+        <!-- CASE 1: No inline fill; CSS Class works -->
+        <div class="m-3">
+            <h4>1. Originally filled. Easiest to work with. Simply apply fill/stroke as desired in CSS to the instance</h4>
+            <strong class="text-info"></strong>
+            <ul>
+              <li><strong class="text-info">No inline fill; CSS Class works</strong></li>
+              <li><strong class="text-info">But is from filled instance. Also, we can still apply a stroke</strong></li>
+            </ul>
+            <div class="d-flex flex-row justify-content-between p-2">
+                <div>
+                    <p>SVG Only</p>
+                    <svg>
+                        <use xlink:href="#completed-copy-filled" />
+                    </svg>
+                </div>
+                <div>
+                    <p>SVG + CSS class</p>
+                    <svg class="filled-instance">
+                        <use xlink:href="#completed-copy-filled" />
+                    </svg>
+                    <pre>.filled-instance {
+  stroke: #cc8ac1;
+  stroke-width: 5px;
+  fill: lighten(#cc8ac1, 20%);
+}
+                    </pre>
+                </div>
+            </div>
+        </div>
+        <!--  CASE 2: Inline Fill + Stroke; CSS class styling not working;   -->
+        <div class="m-3">
+            <h4>2. Originally stroked with no fill using [stroke] attribute in CSS to &ldquo;reach-in&rdquo; to the SVG</h4>
+            <ul>
+              <li><strong class="text-info">stroked instance is no longer styleable from instance</strong></li>
+              <li><strong class="text-info">Inline Fill none + Stroke; CSS class styling not working;</strong></li>
+              <li><strong class="text-info">But symbol#xxx [stroke] works</strong></li>
+            </ul>
+            <div class="d-flex flex-row justify-content-between p-2">
+                <div>
+                    <p>SVG Only</p>
+                    
+                    <svg>
+                        <use xlink:href="#completed-copy-stroked" />
+                    </svg>
+<pre>path 
+  fill="none" 
+  stroke="#000000"
+</pre>
+                </div>
+                <div>
+                    <p>SVG + CSS class</p>
+                    <svg class="stroked-instance">
+                        <use xlink:href="#completed-copy-stroked" />
+                    </svg>
+<pre>.stroked-instance {
+  stroke: green; 
+  fill: red;
+}</pre>
+                </div>
+                <div>
+                    <p>SVG + CSS class (symbol#svgname[stroke])</p>
+                    <svg class="stroked-instance">
+                        <use xlink:href="#completed-copy-stroked-2" />
+                    </svg>
+<pre>symbol#completed-copy-stroked-2 [stroke] {
+  stroke: #dd6435;
+  stroke-width: 5px;
+}</pre>
+                </div>
+            </div>
+        </div>
+        <!-- CASE 3: No inline fill; CSS Class fill transparent works -->
+        <div class="m-3">
+            <h4>3. Originally filled, but fill turned off</h4>
+            <ul>
+              <li><strong class="text-info">You can always achieve an outlined effect by simply "turning off" the fill</strong></li>
+              <li><strong class="text-info">No inline fill (default black); CSS Class fill transparent works</strong></li>
+            </ul>
+            <div class="d-flex flex-row justify-content-between p-2">
+                <div>
+                    <p>SVG Only</p>
+                    <svg>
+                        <use xlink:href="#completed-copy-filled" />
+                    </svg>
+                </div>
+                <div>
+                    <p>SVG + CSS class</p>
+                    <svg class="filled-instance-off">
+                        <use xlink:href="#completed-copy-filled" />
+                    </svg>
+<pre>.filled-instance-off {
+  stroke: #d08aaf;
+  stroke-width: 5px;
+  fill: transparent;
+}</pre>
+                </div>
+            </div>
+        </div>
+        <!-- CASE 4: inline fill none + stroke color; CSS Class fill transparent works -->
+        <!--  SVG Inline class: ibestrokin  -->
+        <div class="m-3">
+            <h4>4. Manually adding classes to the source SVG allows us to style to those in CSS</h4>
+            <ul>
+              <li><strong class="text-info">You can also just add classes within the source SVG and apply CSS to those directly.</strong></li>
+              <li><strong class="text-info">SVG Inline classes</strong></li>
+            </ul>
+            <div class="d-flex flex-row justify-content-between p-2">
+                <div>
+                    <p>SVG Only</p>
+                    <svg>
+                        <use xlink:href="#completed-copy-stroked-classes" />
+                    </svg>
+                    <pre>
+  path fill="none" stroke="#000000"
+  path class="ibestrokin" fill="none"
+  path class="ibestrokin" fill="none"
+  polygon class="istrokeittotheeast" fill="none" stroke="#000000"
+                    </pre>
+                    <pre>
+.ibestrokin {
+    stroke: magenta;
+    stroke-width: 5px;
+  }
+                    </pre>
+                    <pre>
+.istrokeittotheeast {
+    stroke: green;
+    stroke-width: 7px;
+} 
+                    </pre>
+                </div>
+                <!--             <div>
+                    <p>SVG + CSS class</p>
+                    <svg class="filled-instance">
+                        <use xlink:href="#completed-copy-filled" />
+                    </svg>
+                </div> -->
+            </div>
+        </div>
+        <!-- CASE 5: inline fill red > css styling cyan; but other place works -->
+        <!--         <div>
+            <p>Hand Filled–Note that the part of the filled area that's been defined with a fill attribute (red), will NOT get overriden when we apply CSS to the SVG cloned instance. The parts that are working are cyan.</p>
+            <svg class="hand-filled-instance">
+                <use xlink:href="#hand-filled" />
+            </svg>
+        </div> -->
+        <div class="m-3">
+            <h4>5. Hand Filled–Note that the part of the filled area that's been defined with a fill attribute (red), will NOT get overriden when we apply CSS to the SVG cloned instance. The parts that are working are cyan.</h4>
+            <ul>
+              <li><strong class="text-info">Inline fill red > css styling cyan; but other place works</strong></li>
+              <li><strong class="text-info">Although we can override fill/stroke attributes from CSS if we apply that CSS directly to the definition, we cannot do via CSS applied to the instance</strong></li>
+            </ul>
+            <div class="d-flex flex-row justify-content-between p-2">
+                <div>
+                    <p>SVG Only</p>
+                    <svg>
+                        <use xlink:href="#hand-filled" />
+                    </svg>
+                </div>
+                <div>
+                    <p>SVG + CSS class</p>
+                    <svg class="hand-filled-instance">
+                        <use xlink:href="#hand-filled" />
+                    </svg>
+                    <pre>
+.hand-filled-instance {
+    fill: cyan; //Not working with parts filled
+    stroke: #CC0000;
+    stroke-width: 5px;
+} 
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
